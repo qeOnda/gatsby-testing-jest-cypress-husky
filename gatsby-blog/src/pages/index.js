@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import React from "react"
+import { Link, graphql } from "gatsby"
+import Layout from "../components/layout"
 
 export default function IndexPage({ data }) {
-  return ( 
+  return (
     <Layout>
       <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>    
+      <p>Welcome to your new Gatsby site.</p>
       <ul>
         {data.allStrapiArticle.edges.map(document => (
           <li key={document.node.id}>
@@ -22,10 +22,7 @@ export default function IndexPage({ data }) {
   )
 }
 
-
-
-
-export const pageQuery = graphql`  
+export const pageQuery = graphql`
   query IndexQuery {
     allStrapiArticle {
       edges {
